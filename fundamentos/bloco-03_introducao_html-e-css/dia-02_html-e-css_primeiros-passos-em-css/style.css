@@ -1,0 +1,49 @@
+body {
+    font-size: 16px;
+    text-align: center;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 65px;
+    color: orange;
+}
+
+p {
+    font-weight: 600;
+    font-size: 3em;
+}
+
+ul {
+    background-color: #f3f3f3;
+}
+
+li {
+    line-height: 1.5em;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.bg-lightblue {
+    background-color: #b3d5e0;   
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.gray {
+    background-color: gray;
+}
+
+li.black {
+    color: white;
+}
