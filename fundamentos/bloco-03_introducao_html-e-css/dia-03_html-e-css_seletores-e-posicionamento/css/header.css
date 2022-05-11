@@ -1,0 +1,39 @@
+header {
+    padding-bottom: 70px;
+}
+
+nav {
+    position: fixed;
+    background-color: #3e3e3e;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 20px 0px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ebebeb;
+    padding: 20px;
+    transition: ease-in-out 0.5s;
+}
+
+nav a:hover {
+    background-color: #292929;
+    transition: ease-in-out 0.5s;
+}
+
+nav a:visited {
+    color: #dfdede;
+}
+
+body {
+    margin: 0px
+}
