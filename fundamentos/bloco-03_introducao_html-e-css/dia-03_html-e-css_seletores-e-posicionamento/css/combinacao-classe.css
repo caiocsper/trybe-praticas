@@ -39,18 +39,18 @@ ul:nth-of-type(2) a:hover {
     font-weight: bold;
 }
 
-ul:nth-of-type(2) li:nth-child(1) a:hover {
+ul:nth-of-type(2) li a[href*="stackoverflow"]:hover {
     color: orange;
+  }
+  
+ul:nth-of-type(2) li a[href*="w3schools"]:hover, ul:nth-of-type(2) li a[href*="trybe"]:hover {
+color: green;
 }
 
-ul:nth-of-type(2) li:nth-child(2) a:hover, ul:nth-of-type(2) li:nth-child(5) a:hover {
-    color: green;
+ul:nth-of-type(2) li a[href*="mozilla"]:hover {
+color: black;
 }
 
-ul:nth-of-type(2) li:nth-child(3) a:hover {
-    color: black;
-}
-
-ul:nth-of-type(2) li:nth-child(4) a:hover {
-    color: yellow;
+ul:nth-of-type(2) li a[href*="devdocs"]:hover {
+color: yellow;
 }
