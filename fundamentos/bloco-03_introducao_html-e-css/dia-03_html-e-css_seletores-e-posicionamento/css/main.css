@@ -19,6 +19,8 @@ header {
 }
 
 .navigation-menu a{
+    display: block;
+    padding: 20px;
     color: #ebebeb;
     text-decoration: none;
     font-family: monospace;
@@ -33,7 +35,6 @@ header {
 .navigation-menu li{
     background-color: #3e3e3e;
     border: 2px #3e3e3e solid;
-    padding: 20px;
     margin: 15px;
 }
 
