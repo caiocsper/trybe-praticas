@@ -2,7 +2,7 @@ const getPokemonDetails = require('./Ex-08');
 
 describe('insert', () => {
   it('insert', (done) => {
-    getPokemonDetails((pokemon) => pokemon.name === 'Bulbassaur',
+    getPokemonDetails((pokemon) => pokemon.name === 'Bulbasaur',
     (error, message) => {
       if (error) {
         done(error);
