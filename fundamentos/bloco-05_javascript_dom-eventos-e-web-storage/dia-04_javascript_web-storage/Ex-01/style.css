@@ -1,0 +1,62 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header {
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.page-header h1 {
+  vertical-align: middle;
+  margin: 0;
+  font-size: 1.75em;
+}
+
+.text-section {
+  display: inline-block;
+  max-width: 60%;
+}
+
+.text-settings {
+  float: right;
+  min-width: 20%;
+}
+
+.settings-container {
+  text-align: center;
+}
+
+.settings-container div {
+  width: 95%;
+  text-align: left;
+  margin: 15px 0;
+}
+
+.settings-container input {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 100%;
+  border-radius: 30px;
+  height: 40px;
+  padding-left: 5px;
+}
+
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+}
+
+.page-footer span {
+  vertical-align: middle;
+  margin: 0;
+}
