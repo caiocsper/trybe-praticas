@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+  </head>
+  <body>
+    <main>
+      <form action="" method="get" enctype="multipart/form-data" id="trybetrip-form">
+        <label for="fullname">Nome completo:
+          <input type="text" name="fullname" minlength="10" maxlength="40" id="fullname" required>
+        </label>
+
+        <label for="email">E-mail:
+          <input type="email" name="email" minlength="10" maxlength="50" id="email" required>
+        </label>
+
+        <fieldset>
+          <legend>Destino Preferido:</legend>
+          <label for="city">Cidade
+            <input type="radio" name="destiny" id="city" value="city">
+          </label>
+          <label for="contryside">Campo
+            <input type="radio" name="destiny" id="contryside" value="country">
+          </label>
+          <label for="beach">Praia
+            <input type="radio" name="destiny" id="beach" value="beach">
+          </label>
+          <label for="mountain">Montanhas
+            <input type="radio" name="destiny" id="mountain" value="mountain">
+          </label>
+        </fieldset>
+
+        <label for="win-reason">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
+          <textarea name="reason" id="win-reason" cols="30" rows="10" maxlength="500"></textarea>
+        </label>
+        
+        <label for="trip-date">Qual a melhor data para realizar sua viagem?
+          <input type="date" id="trip-date" name="trip-date">
+        </label>
+
+        <label for="newsletter">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+          <input type="checkbox" name="newsletter-subscription" id="newsletter">
+        </label>
+
+        <label for="consent">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+          <input type="checkbox" id="consent" name="image-consent" required>
+        </label>
+        
+        <button type="submit" id="send">Enviar</button>
+        <button type="reset" id="reset">Apagar</button>
+      </form>
+    </main>
+
+    <script type="application/javascript" src="script.js"></script>
+  </body>
+</html>

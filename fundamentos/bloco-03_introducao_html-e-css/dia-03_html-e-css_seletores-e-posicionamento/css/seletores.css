@@ -1,0 +1,15 @@
+h1, p {
+    text-align: center;
+}
+
+ol:hover {
+    background-color: powderblue;
+}
+
+li:active {
+    font-family: monospace;
+}
+
+ol, li {
+    list-style: none;
+}
