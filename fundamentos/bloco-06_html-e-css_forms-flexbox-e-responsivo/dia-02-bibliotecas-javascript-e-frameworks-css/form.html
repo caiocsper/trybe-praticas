@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <main>
+      <form action="" method="get" class="d-flex form-flex" enctype="multipart/form-data" id="trybetrip-form">
+        <fieldset class="d-flex flex-row form-info">
+          <legend>Informações Básicas</legend>
+
+          <div class="form-floating">
+            <input type="text" class="form-control" name="fullname" placeholder="Nome completo" minlength="10" maxlength="40" id="fullname" required>
+            <label for="fullname">Nome completo</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="email" class="form-control" name="email" placeholder="E-mail" minlength="10" maxlength="50" id="email" required>
+            <label for="email">E-mail</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="d-flex flex-row">
+          <legend>Destino Preferido</legend>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="destiny" id="city" value="city">
+            <label class="form-check-label" for="city">Cidade</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="destiny" id="contryside" value="country">
+            <label class="form-check-label" for="contryside">Campo</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="destiny" id="beach" value="beach">
+            <label class="form-check-label" for="beach">Praia</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="destiny" id="mountain" value="mountain">
+            <label class="form-check-label" for="mountain">Montanhas</label>
+          </div>
+        </fieldset>
+
+        <div class="form-floating">
+          <textarea name="reason" class="form-control" id="win-reason" placeholder="Escreva aqui" cols="30" rows="10" maxlength="500"></textarea>
+          <label class="form-label" for="win-reason">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+        </div>
+        
+        <div class="form-floating">
+          <input class="form-control" placeholder="Qual a melhor data para realizar sua viagem?" type="text" id="trip-date" name="trip-date">
+          <label for="trip-date">Qual a melhor data para realizar sua viagem?</label>
+        </div>
+        
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="newsletter-subscription" id="newsletter">
+          <label class="form-check-label" for="newsletter">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="consent" name="image-consent" required>
+          <label class="form-check-label" for="consent">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+        </div>
+        
+        <div class="btn-group" role="group">
+          <button type="submit" class="btn btn-primary" id="send">Enviar</button>
+          <button type="reset" class="btn btn-danger" id="reset">Apagar</button>
+        </div>
+      </form>
+    </main>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script type="application/javascript" src="script.js"></script>
+  </body>
+</html>
