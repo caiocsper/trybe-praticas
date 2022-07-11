@@ -1,0 +1,26 @@
+{
+  "name": "trybe-praticas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiocsper/trybe-praticas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiocsper/trybe-praticas/issues"
+  },
+  "homepage": "https://github.com/caiocsper/trybe-praticas#readme",
+  "description": "",
+  "devDependencies": {
+    "jest": "^28.1.2"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
