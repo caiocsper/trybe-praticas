@@ -11,46 +11,51 @@ class Pokedex extends React.Component {
   constructor(props) {
     super(props);
 
+    const { pokemons } = this.props;
+
     this.state = {
-      curPokemon: 0,
+      curPokemonId: pokemons.at(0).id,
       typeFilter: null,
       btnDisabled: false,
     };
   }
 
-  nextPokemon = (pokemons) => {
-    this.setState(({ curPokemon }) => {
-      const nextPokemon = curPokemon + 1;
+  handleDirectionClick = ({ target }) => {
+    this.setState(({ curPokemonId }) => {
+      const direction = target.getAttribute('data-pokedirection');
+      const pokemonsByType = this.getPokemonsByType();
+      const curPokeIndex = pokemonsByType
+        .map(({ id }) => id)
+        .indexOf(curPokemonId);
+      const previousPokemon = pokemonsByType.at(curPokeIndex - 1);
+      const nextPokemon = pokemonsByType.at(curPokeIndex + 1) || pokemonsByType.at(0);
 
-      return { curPokemon: nextPokemon < pokemons.length ? nextPokemon : 0 };
+      switch (direction) {
+        case 'next':
+          return { curPokemonId: nextPokemon.id };
+        case 'previous':
+          return { curPokemonId: previousPokemon.id };
+      }
     });
   }
 
-  previousPokemon = (pokemons) => {
-    this.setState(({ curPokemon }) => {
-      const previousPokemon = curPokemon - 1;
-
-      return {
-        curPokemon: previousPokemon >= 0
-          ? previousPokemon
-          : pokemons.length - 1,
-      };
-    });
-  }
-
-  getPokemonsByType = () => {
+  getPokemonsByType = (paramFilter) => {
     const { pokemons } = this.props;
-    const { typeFilter } = this.state;
+    const { typeFilter: stateFilter } = this.state;
+    const typeFilter = paramFilter || stateFilter;
 
     return pokemons.filter(({ type }) => !typeFilter || type === typeFilter);
   };
 
   changeTypeFilter = ({ target }) => {
-    this.setState(({ curPokemon, typeFilter }) => {
+    this.setState(({ curPokemonId }) => {
       const newFilter = target.getAttribute('data-typefilter');
+      const pokemonsByType = this.getPokemonsByType(newFilter);
+      const curPoke = pokemonsByType.find(({ id }) => id === curPokemonId)
+                      || pokemonsByType.at(0);
 
       return {
-        curPokemon: newFilter === typeFilter ? curPokemon : 0,
+        curPokemonId: curPoke.id,
         typeFilter: newFilter,
       };
     }, () => {
@@ -77,25 +82,29 @@ class Pokedex extends React.Component {
   };
 
   render() {
-    const { curPokemon, btnDisabled } = this.state;
+    const { curPokemonId, btnDisabled } = this.state;
     const pokemonsByType = this.getPokemonsByType();
 
     return (
       <section className="pokedex">
-        <Pokemon pokemon={ pokemonsByType.at(curPokemon) } />
+        <Pokemon pokemon={ pokemonsByType.find(({ id }) => id === curPokemonId) } />
 
         <div className="controls">
           <Button
             cssClasses="previous"
             disabled={ btnDisabled }
-            handleClick={ () => this.previousPokemon(pokemonsByType) }
+            dataAttr="data-pokedirection"
+            dataAttrValue="previous"
+            handleClick={ this.handleDirectionClick }
           >
             Previous
           </Button>
           <Button
             cssClasses="next"
             disabled={ btnDisabled }
-            handleClick={ () => this.nextPokemon(pokemonsByType) }
+            dataAttr="data-pokedirection"
+            dataAttrValue="next"
+            handleClick={ this.handleDirectionClick }
           >
             Next
           </Button>

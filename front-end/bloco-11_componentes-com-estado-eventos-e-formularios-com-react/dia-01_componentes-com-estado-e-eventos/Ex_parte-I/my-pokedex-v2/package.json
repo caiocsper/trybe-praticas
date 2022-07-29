@@ -14,12 +14,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint:styles": "npx stylelint '**/*.css'",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -36,12 +31,6 @@
   "devDependencies": {
     "@testing-library/dom": "^8.1.0",
     "@testing-library/user-event": "^12.8.3",
-    "eslint": "^7.32.0",
-    "eslint-config-trybe-frontend": "^1.2.3",
-    "eslint-plugin-sonarjs": "^0.10.0",
-    "prop-types": "^15.7.2",
-    "stylelint": "^13.8.0",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "4.1.0"
+    "prop-types": "^15.7.2"
   }
 }
