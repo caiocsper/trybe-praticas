@@ -21,6 +21,7 @@
     "jest": "^28.1.2"
   },
   "dependencies": {
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^2.6.7",
+    "react-router-dom": "^5.3.3"
   }
 }
